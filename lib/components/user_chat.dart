@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chatbot/models/chat_model.dart';
 
 class UserChat extends StatelessWidget {
-  final ChatModel? chat;
-  const UserChat({super.key, this.chat});
+  final String? text;
+  const UserChat({super.key, this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class UserChat extends StatelessWidget {
             ),
           ),
           child: Text(
-            "${chat!.message}",
+            "${text}",
             style: TextStyle(color: Colors.white),
           ),
         ),
